@@ -13,6 +13,7 @@ function MovieList() {
         console.log("useEffect is running")
 
         const getMovies = async () => {
+<<<<<<< Updated upstream
             try {
                 const response = await fetch("http://localhost:6654/movies")
                 const m = await response.json()
@@ -21,6 +22,12 @@ function MovieList() {
             } catch(e) {
                 setErr(true)
             }
+=======
+            const response = await fetch("http://localhost:200/movies")
+            const m = await response.json()
+            console.log("MOVIES", m)
+            setMovies(m)
+>>>>>>> Stashed changes
         }
 
         getMovies()
@@ -42,6 +49,7 @@ function MovieList() {
 
     return <div>
         <h2>My Movies</h2>
+<<<<<<< Updated upstream
         <div style={{ display: "flex", flexDirection: "row" }}>
             {movies.map((movie,index) => (
                 <MovieEntry
@@ -53,6 +61,11 @@ function MovieList() {
                     <Container />
                     <Container />
                 </MovieEntry>
+=======
+        <div>
+            {movies.map(movie => (
+                <MovieEntry name={movie.title} director={movie.directors} imgSrc={movie.poster} />
+>>>>>>> Stashed changes
             ))}
         </div>
     </div>

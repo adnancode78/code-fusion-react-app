@@ -23,9 +23,15 @@ function MovieEntry(props) {
                 }}
     >
         <h3>{name}</h3>
+<<<<<<< Updated upstream
         {children}
         <p>{director}</p>
         <img src={imgSrc} alt=""/>
+=======
+        <h3>{director}</h3>
+        <img src={imgSrc} />
+        <h1>Hello</h1>
+>>>>>>> Stashed changes
     </div>
 }
 
